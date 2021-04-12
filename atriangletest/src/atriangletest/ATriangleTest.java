@@ -1,7 +1,8 @@
 /*
- * To change this license header, choose License Headers in Project Properties.
- * To change this template file, choose Tools | Templates
- * and open the template in the editor.
+ This program is the create a large transparent circle that contain 3 circle 
+around it cicumfrence at random points thar are draggable and they are connected 
+to each other creatinga traingle and showing it angles whenever dragging 
+any of the three circle
  */
 package atriangletest;
 
