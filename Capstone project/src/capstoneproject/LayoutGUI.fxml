@@ -1,0 +1,89 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.*?>
+<?import javafx.scene.text.*?>
+<?import javafx.scene.image.*?>
+<?import javafx.scene.effect.*?>
+<?import javafx.scene.shape.*?>
+<?import javafx.scene.canvas.*?>
+<?import java.lang.*?>
+<?import java.net.*?>
+<?import java.util.*?>
+<?import javafx.scene.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+
+<Pane xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="capstoneproject.LayoutGUIController">
+   <children>
+      <Pane prefHeight="688.0" prefWidth="1209.0" style="-fx-background-color: GRAY;">
+         <children>
+            <Button layoutX="37.0" layoutY="87.0" mnemonicParsing="false" onAction="#brushSelected" prefHeight="42.0" prefWidth="57.0" text="Brush" />
+            <Button graphicTextGap="1.0" layoutX="14.0" layoutY="357.0" mnemonicParsing="false" onAction="#paintBucketSelected" prefHeight="42.0" prefWidth="71.0" text="Paint Bucket" textAlignment="CENTER" wrapText="true">
+               <effect>
+                  <Glow />
+               </effect>
+            </Button>
+            <Button layoutX="37.0" layoutY="136.0" mnemonicParsing="false" onAction="#eraserSelected" prefHeight="42.0" prefWidth="57.0" text="Eraser" />
+            <Button layoutX="107.0" layoutY="371.0" mnemonicParsing="false" onAction="#txtSelected" text="Text" />
+            <ColorPicker fx:id="colorPicker" layoutX="15.0" layoutY="189.0" prefHeight="25.0" prefWidth="122.0" />
+            <MenuBar prefHeight="25.0" prefWidth="1209.0">
+              <menus>
+                <Menu fx:id="menuBar" mnemonicParsing="false" text="File">
+                  <items>
+                        <MenuItem fx:id="newButton" mnemonicParsing="false" onAction="#newButtonSelected" text="New" />
+                    <MenuItem fx:id="openButton" mnemonicParsing="false" onAction="#openButtonSelected" text="Open" />
+                        <MenuItem fx:id="saveButton" mnemonicParsing="false" onAction="#saveButtonSelected" text="Save" />
+                  </items>
+                </Menu>
+                <Menu mnemonicParsing="false" text="Edit">
+                  <items>
+                    <MenuItem fx:id="undoButton" mnemonicParsing="false" onAction="#undoButtonSelected" text="Undo" />
+                        <MenuItem fx:id="redoButton" mnemonicParsing="false" onAction="#redoButtonSelected" text="Redo" />
+                  </items>
+                </Menu>
+                <Menu mnemonicParsing="false" text="Help">
+                  <items>
+                    <MenuItem mnemonicParsing="false" text="About" />
+                  </items>
+                </Menu>
+              </menus>
+            </MenuBar>
+            <TextField fx:id="bSize" alignment="CENTER_RIGHT" layoutX="14.0" layoutY="277.0" onAction="#brushSize" prefHeight="25.0" prefWidth="110.0" promptText="Custom Px" />
+            <Pane layoutX="172.0" layoutY="40.0" style="-fx-background-color: WHITE;">
+               <children>
+                  <Canvas fx:id="canvas" height="633.0" width="1025.0">
+                     <effect>
+                        <Glow level="0.4" />
+                     </effect>
+                  </Canvas>
+               </children>
+            </Pane>
+            <VBox layoutX="14.0" layoutY="217.0" prefHeight="58.0" prefWidth="130.0">
+               <children>
+                  <MenuButton mnemonicParsing="false" prefHeight="25.0" prefWidth="122.0" text="Stroke size">
+                    <items>
+                      <MenuItem mnemonicParsing="false" onAction="#twoPx" text="2px" />
+                      <MenuItem mnemonicParsing="false" onAction="#fivePx" text="5 px" />
+                        <MenuItem mnemonicParsing="false" onAction="#eightPx" text="8px" />
+                        <MenuItem mnemonicParsing="false" onAction="#tenPx" text="10px" />
+                    </items>
+                  </MenuButton>
+                  <TextField fx:id="currentStroke" alignment="CENTER_RIGHT" editable="false" mouseTransparent="true" prefHeight="25.0" prefWidth="88.0">
+                     <VBox.margin>
+                        <Insets right="20.0" top="2.0" />
+                     </VBox.margin>
+                  </TextField>
+               </children>
+            </VBox>
+            <Text fill="WHITE" layoutX="125.0" layoutY="267.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Px">
+               <font>
+                  <Font size="15.0" />
+               </font>
+            </Text>
+            <Button layoutX="3.0" layoutY="320.0" mnemonicParsing="false" onAction="#circleSelected" text="Circle" />
+            <Button layoutX="50.0" layoutY="320.0" mnemonicParsing="false" onAction="#lineSelected" text="Line" />
+            <Button layoutX="89.0" layoutY="320.0" mnemonicParsing="false" onAction="#rectSelected" text="Rect" />
+         </children>
+      </Pane>
+   </children>
+</Pane>
